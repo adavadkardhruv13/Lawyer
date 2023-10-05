@@ -28,3 +28,14 @@ class Lawyer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Notary(models.Model):
+    Name = models.CharField(max_length=100)
+    reg_no = models.IntegerField(max_length=5, null=False)
+    address = models.CharField(max_length=1000)
+    city = models.ManyToManyField(City)
+    state = models.ManyToManyField(State)
+
+
+    def __str__(self):
+        return self.Name

@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
-from .models import Lawyer,State, City
-from .serializers import LawyerSerializer, StateSerializer, CitySerializer
+from .models import Lawyer,State, City, Notary
+from .serializers import LawyerSerializer, StateSerializer, CitySerializer, NotarySerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -53,3 +53,16 @@ def cityView(request):
             return Response(serializer.errors)
 
 
+def notaryView(request):
+    if request.method == 'GET':
+        detail = Notary.objects.all()
+        serializer = NotarySerializer(detail, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    if request.method == 'POST':
+        serialzer = NotarySerializer(data=request.data)
+        if serialzer.is_valid():
+            serialzer.save()
+            return JsonResponse(serialzer.data)
+        else:
+            return Response(serialzer.errors)
