@@ -34,5 +34,5 @@ class NotaryAdmin(admin.ModelAdmin):
     list_display = [
         'Name',
         'reg_no',
-        'address'
+        'address',
     ]
