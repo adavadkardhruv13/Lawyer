@@ -70,7 +70,7 @@ Notaries:
 GET /api/notaries/: List all notaries.
 POST /api/notaries/: Create a new notary.
 
-**Additional Notes**
+## Additional Notes
 Customize the database settings in settings.py according to your configuration.
 Ensure the required Django apps and packages are installed.
 
