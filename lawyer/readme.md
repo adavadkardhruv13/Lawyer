@@ -1,4 +1,4 @@
-# Legal Entities Management System
+# LAWYER-API
 
 This Django project provides a management system for legal entities, including Lawyers, Cities, States, and Notaries. It allows you to perform CRUD (Create, Read, Update, Delete) operations on these entities through a RESTful API.
 
@@ -41,7 +41,7 @@ This Django project provides a management system for legal entities, including L
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/adavadkardhruv13/Lawyer-Api.git)
    
 2. **Apply database migrations:**
    ```bash
