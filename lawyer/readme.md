@@ -52,7 +52,7 @@ This Django project provides a management system for legal entities, including L
 4. **Access the API at **
     http://localhost:8000/api/
 
-**API Endpoints**
+## API Endpoints
 Lawyers:
 
 GET /api/lawyers/: List all lawyers.
