@@ -15,8 +15,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+# tttotfrom myapp.serializers import  LocationSerializer
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Lawyer API",
+        default_version='v1',
+        description="This is an API showing data of all the lawyers in Chhattisgarh and its districts ",
+        terms_of_service="https://www.yourapp.com/terms/",
+        contact=openapi.Contact(email="contact@yourapp.com"),
+        license=openapi.License(name="Your License"),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+    # serializer_class = LocationSerializer,
+    #serializer_class = CitySerializer,
+    #serializer_class = StateSerializer,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls'))
+    path('', include('myapp.urls')),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
