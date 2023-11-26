@@ -53,7 +53,7 @@ This Django project provides a management system for legal entities, including L
     http://localhost:8000/api/
 
 ## API Endpoints
-Lawyers:
+**Lawyers:**
 
 GET /api/lawyers/: List all lawyers.
 POST /api/lawyers/: Create a new lawyer.
@@ -61,11 +61,13 @@ Cities:
 
 GET /api/cities/: List all cities.
 POST /api/cities/: Create a new city.
-States:
+
+**States:**
 
 GET /api/states/: List all states.
 POST /api/states/: Create a new state.
-Notaries:
+
+**Notaries:**
 
 GET /api/notaries/: List all notaries.
 POST /api/notaries/: Create a new notary.
