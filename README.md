@@ -41,7 +41,7 @@ This Django project provides a management system for legal entities, including L
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/adavadkardhruv13/Lawyer-Api.git)
    
 2. **Apply database migrations:**
    ```bash
